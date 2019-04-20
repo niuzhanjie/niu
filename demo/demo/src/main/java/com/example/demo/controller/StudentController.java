@@ -18,20 +18,21 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.entity.StudentEntity;
 import com.example.demo.mapper.StudentMapper;
+import com.example.demo.service.StudentService;
 
 @Controller
 public class StudentController {
 
 	
 	@Autowired
-	private StudentMapper studentMapper;
+	private StudentService service;
 
 	
 
 	@RequestMapping("/getStudent")
 	public String getUsers(Model model) {
 
-		List<StudentEntity> student=studentMapper.getAll();
+		List<StudentEntity> student=service.getAll();
 		model.addAttribute("student", student);
 		return "index";
 
@@ -65,8 +66,8 @@ public class StudentController {
 	    } catch (IOException e) {
 	        e.printStackTrace();
 	    }
-	    List<StudentEntity> student=studentMapper.getAll();
-		model.addAttribute("student", student);
+	 //   List<StudentEntity> student=studentMapper.getAll();
+		//model.addAttribute("student", student);
 	    return "index";
 	}
 }
