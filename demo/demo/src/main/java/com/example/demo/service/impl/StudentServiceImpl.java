@@ -17,8 +17,21 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public List<StudentEntity> getAll() {
+		List<StudentEntity> list=studentMapper.getAll();
+		
+		return list;
+	}
+
+	@Override
+	public int update(StudentEntity studentEntity) {
 		// TODO Auto-generated method stub
-		return studentMapper.getAll();
+		return studentMapper.update(studentEntity);
+	}
+
+	@Override
+	public StudentEntity getOne(int id) {
+		// TODO Auto-generated method stub
+		return studentMapper.getOne(id);
 	}
 	
 	

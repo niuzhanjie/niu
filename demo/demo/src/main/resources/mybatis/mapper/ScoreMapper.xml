@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.ScoreMapper">
+
+	<resultMap id="ScoreMap" type="com.example.demo.entity.ScoreEntity">
+
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="score" property="grade"	jdbcType="INTEGER" />
+	</resultMap>
+
+	<select id="getAll" resultMap="ScoreMap">
+	
+	
+		SELECT * FROM score where id=#{id}
+	</select>
+
+
+</mapper>
+
+
+

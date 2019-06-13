@@ -17,5 +17,8 @@ public interface StudentService {
 
 	List<StudentEntity> getAll();
 	
+	int update(StudentEntity studentEntity);
 	
+	StudentEntity getOne(int id);
+
 }

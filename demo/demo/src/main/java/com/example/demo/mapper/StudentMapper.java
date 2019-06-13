@@ -17,6 +17,10 @@ public interface StudentMapper {
 
 	List<StudentEntity> getAll();
 	
+	int update(StudentEntity studentEntity);
+	
+	StudentEntity getOne(int id);
+	
 //	@Select("SELECT * FROM student")
 //	@Results({
 //		@Result(property = "id",  column = "id"),

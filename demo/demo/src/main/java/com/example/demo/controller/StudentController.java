@@ -33,10 +33,37 @@ public class StudentController {
 	public String getUsers(Model model) {
 
 		List<StudentEntity> student=service.getAll();
+		for(StudentEntity s:student) {
+			System.out.println(s.getScore().getGrade());
+		}
+		
+		
 		model.addAttribute("student", student);
 		return "index";
 
 	}
+	
+	@RequestMapping("/getOneStudent")
+	public String getOneStudent(int id,Model model) {
+		StudentEntity studentEntity=service.getOne(id);
+		model.addAttribute("studentEntity",studentEntity);
+		return "updateStudent";
+		
+	}
+	
+	@RequestMapping("/updateStudent")
+	public String updateStudent(StudentEntity studentEntity) {
+		int number=service.update(studentEntity);
+		if(number>0) {
+			System.out.println("修改成功");
+		}else {
+			System.out.println("修改失败");
+
+		}
+		return "index";
+		
+	}
+	
 	
 	@RequestMapping("/uploadIndex")
 	public String upload(Model model) {
@@ -44,6 +71,14 @@ public class StudentController {
 		return "upload";
 
 	}
+	
+	@RequestMapping("/tabIndex")
+	public String tabIndex(Model model) {
+
+		return "tabdemo";
+
+	}
+	
 	
 	 private static String UPLOADED_FOLDER = "E://temp//";
 	 @RequestMapping("/upload") 
