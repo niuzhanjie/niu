@@ -4,4 +4,5 @@ redis-server.exe redis.windows.conf
 切换到目录之后使用redis:
 redis-cli.exe -h 127.0.0.1 -p 6379
 
-test11111
+
+git commit file/to/path -i -m "merge"
