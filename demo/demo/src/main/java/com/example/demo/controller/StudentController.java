@@ -9,15 +9,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+
 import com.example.demo.entity.StudentEntity;
-import com.example.demo.mapper.StudentMapper;
 import com.example.demo.service.StudentService;
 
 @Controller
@@ -31,7 +29,7 @@ public class StudentController {
 
 	@RequestMapping("/getStudent")
 	public String getUsers(Model model) {
-
+	
 		List<StudentEntity> student=service.getAll();
 		for(StudentEntity s:student) {
 			System.out.println(s.getScore().getGrade());
