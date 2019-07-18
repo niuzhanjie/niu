@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body class="container" th:fragment="search" >
+
+<br/>
+<!-- <div  style="background:url(../static/images/tianjingeye.jpg)" > -->
+<div id="all" th:style="'background:url(' + @{../images/tianjingeye.jpg} + '); '" >
+<h1 style="padding-left:350px;padding-top:50px">是不是聪明又漂亮？</h1>
+
+
+  
+  <div class="pull-right " style="padding-right:500px;padding-top:10px" >
+ <button type="button"  id="reset" class="btn  btn-default" data-toggle="modal" data-target="#myModal">那当然了</button>
+ </div>
+ <div class="pull-right" style="padding-right:10px;padding-top:10px">
+ <button type="button"  id="search" class="btn  btn-default" data-toggle="modal" data-target="#selectno">这个不一定</button>
+ </div>
+
+
+<style> 
+#all{height:1000px;
+background-image:no-repeat
+
+} 
+</style> 
+
+
+<script>
+$(document).ready(function(){
+	getData();
+   function  getData(){
+	   var name=$("#name").val();
+	   var sex=$("#sex").val();
+	   var ages=$("#ages").val();
+	   console.log(sex);
+       $.ajax({
+           url:'getStudent',
+           type:'post',
+           dataType:'json',
+           data:{
+        	   "name":name,
+        	   "sex":sex,
+        	   "ages":ages
+           },
+           success:function(data){
+               $.each(data,function(index,item){
+            	  
+                   var tr;
+                   tr='<td>'+item.id+'</td>'+'<td>'+item.name+'</td>'+'<td>'+item.sex+'</td>'+'<td>'+item.ages+'</td>'+'<td>'+item.date+'</td>';
+                   $("#tabletest").append('<tr>'+tr+'</tr>')
+               })
+           }
+    })  
+   }
+ 
+
+	$("#search").click(function() {
+		$("#tabletest  tr:not(:first)").empty("");  
+		getData();
+		});
+
+	$("#reset").click(function() {
+		    name=$("#name").val("");
+		    sex=$("#sex").val("");
+		    ages=$("#ages").val("");
+	});	
+	
+	$("#download").click(function() {
+		$.ajax({
+			  url:'downloadExcel',
+	       //    type:'post',
+	           dataType:'json',
+	         
+	           success:function(data){
+	          console.log("chenggong");
+	           }
+		})
+		});
+
+				// 	   var fanxiBox = $("#oneCheck input:checkbox");
+				//        fanxiBox.click(function () {
+				//           if(this.checked){
+				//               fanxiBox.removeAttr("checked");
+				//               $(this).prop("checked", true);
+
+				//             }else{
+				//             	console.log(this.checked+"222");
+				//             	 $(this).prop("checked", true);
+				//             	 }
+				//        });
+
+			});
+</script>
+</div>
+</body>
+
+
+
+
+</html>

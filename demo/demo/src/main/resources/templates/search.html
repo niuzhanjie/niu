@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body class="container" th:fragment="search">
+<br/>
+<div >
+<h1>学生列表</h1>
+<form class="form-horizontal" role="form"  method="post" >
+  <div class="form-group">
+    <label for="name" class="col-sm-1 control-label">姓名</label>
+    <div>
+    <input type="text" class="col-sm-2" id="name" name="name" placeholder="请输入名称">
+    </div>
+    
+    <label for="name" class="col-sm-1
+     control-label">性别</label>
+    <div>
+    <input type="text" class="col-sm-2" id="sex" name="sex"  placeholder="请输入性别">
+    </div>
+    
+     <label for="name" class="col-sm-1
+     control-label">年龄</label>
+    <div>
+    <input type="text" class="col-sm-2" id="ages" name="ages" placeholder="请输入年龄">
+    </div>
+  </div>
+  
+  <div class="pull-right " style="padding-left:2px" >
+ <button type="button"  id="reset" class="btn  btn-default">重置</button>
+ </div>
+ <div class="pull-right">
+ <button type="button"  id="search" class="btn  btn-default">查询</button>
+ </div>
+</form>
+<br/><br/>
+<div class="pull-right">
+<!--  <button type="button" id="download" class="btn  btn-default">下载</button> -->
+  <a th:href="@{/downloadExcel}" class="btn  btn-default">下载模板</a>
+ </div>
+ <div class="pull-right" style="padding-right:2px">
+ 
+ <input type="button" class="btn  btn-default" value="导入" data-toggle="modal" data-target="#myModal">
+ 
+  <a th:href="@{/exportExcel2}" class="btn  btn-default">导出</a>
+ 
+ </div>
+
+<br/><br/>
+<div class="with:80%">
+    <table class="table table-hover" id="tabletest">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>日期</th>
+<!--           <th>得分</th> -->
+        </tr>
+        </thead>
+<!--         <tbody> -->
+<!--          <tr  th:each="student : ${student}"> -->
+<!--             <td th:text="${student.id}"></td> -->
+<!--             <td th:text="${student.name}"></td> -->
+<!--             <td th:text="${student.sex}"></td> -->
+<!--              <td th:text="${student.ages}"></td> -->
+<!--              <td th:text="${student.date2}"></td> -->
+<!--              <td th:text="${student.score.grade}"></td> -->
+         
+<!--         </tr> -->
+<!--         </tbody> -->
+    </table>
+</div>
+
+<script>
+$(document).ready(function(){
+	getData();
+   function  getData(){
+	   var name=$("#name").val();
+	   var sex=$("#sex").val();
+	   var ages=$("#ages").val();
+	   console.log(sex);
+       $.ajax({
+           url:'getStudent',
+           type:'post',
+           dataType:'json',
+           data:{
+        	   "name":name,
+        	   "sex":sex,
+        	   "ages":ages
+           },
+           success:function(data){
+               $.each(data,function(index,item){
+            	  
+                   var tr;
+                   tr='<td>'+item.id+'</td>'+'<td>'+item.name+'</td>'+'<td>'+item.sex+'</td>'+'<td>'+item.ages+'</td>'+'<td>'+item.date+'</td>';
+                   $("#tabletest").append('<tr>'+tr+'</tr>')
+               })
+           }
+    })  
+   }
+ 
+
+	$("#search").click(function() {
+		$("#tabletest  tr:not(:first)").empty("");  
+		getData();
+		});
+
+	$("#reset").click(function() {
+		    name=$("#name").val("");
+		    sex=$("#sex").val("");
+		    ages=$("#ages").val("");
+	});	
+	
+	$("#download").click(function() {
+		$.ajax({
+			  url:'downloadExcel',
+	       //    type:'post',
+	           dataType:'json',
+	         
+	           success:function(data){
+	          console.log("chenggong");
+	           }
+		})
+		});
+
+				// 	   var fanxiBox = $("#oneCheck input:checkbox");
+				//        fanxiBox.click(function () {
+				//           if(this.checked){
+				//               fanxiBox.removeAttr("checked");
+				//               $(this).prop("checked", true);
+
+				//             }else{
+				//             	console.log(this.checked+"222");
+				//             	 $(this).prop("checked", true);
+				//             	 }
+				//        });
+
+			});
+</script>
+</div>
+</body>
+
+
+
+
+</html>

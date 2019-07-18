@@ -7,48 +7,57 @@ public class StudentEntity {
 	private int id;
 	private String name;
 	private String sex;
-	private int ages;
-	private String date2;
+	private String ages;
+	private String date;
 
 	private ScoreEntity score;
 
 	public ScoreEntity getScore() {
 		return score;
 	}
+
 	public void setScore(ScoreEntity score) {
 		this.score = score;
 	}
-	public String getDate2() {
-		return date2;
+
+	public String getDate() {
+		return date;
 	}
-	public void setDate2(String date2) {
-		this.date2 = date2;
+
+	public void setDate(String date) {
+		this.date = date;
 	}
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getSex() {
 		return sex;
 	}
+
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	public int getAges() {
+
+	public String getAges() {
 		return ages;
 	}
-	public void setAges(int ages) {
+
+	public void setAges(String ages) {
 		this.ages = ages;
 	}
-	
-	
-	
+
 }

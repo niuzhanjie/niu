@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body th:fragment="upload">
+<div >
+<div class="modal fade"  id="selectno" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" 
+						aria-hidden="true">
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					错误
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+                        <div class="col-lg-12">
+                            <form id="defaultForm" method="post" class="form-horizontal recoveryNodeForm" action="">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label class="col-lg-5 control-label">滚，好好回答！！！！要不要再重新回答一次？</label>                                    
+                                    </div>
+                                                                                                          
+                                </div>
+                                
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                   
+                                         <button type="button"  id="chongxuan1" class="btn  btn-default" data-toggle="modal" data-target="#myModal">不要</button>                                    
+                                  
+                                         <button type="button" style="margin-left:140px"  id="reset" class="btn  btn-default" data-dismiss="modal">要</button>                                    
+                                    </div>                                                                   
+                                </div>
+                                 <div class="col-lg-12" style="padding-top:20px" id="test2">
+                                    <div class="form-group">
+                                         <button type="button"  id="chongxuan2" class="btn  btn-default" data-toggle="modal" data-target="#myModal">不要</button>                                    
+                                    </div>
+                                                                                                          
+                                </div>
+                                 <div class="col-lg-12" style="padding-top:40px" id="test3">
+                                    <div class="form-group">
+                                         <button type="button"  id="chongxuan3" class="btn  btn-default" data-toggle="modal" data-target="#myModal">不要</button>                                    
+                                        <button type="button"  id="chongxuan4" style="margin-left:140px" class="btn  btn-default" data-toggle="modal" data-target="#myModal">不要</button>                                    
+                                   
+                                    </div>
+                                                                                                          
+                                </div>
+                                <input type="hidden" name="pkId" value="" />
+                            </form>
+                        </div>
+                    </div>
+					
+			</div>
+			
+			  
+                    
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" 
+						data-dismiss="modal">关闭
+				</button>
+<!-- 				<button type="button" class="btn btn-primary"> -->
+<!-- 					确定上传 -->
+<!-- 				</button> -->
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+<script>
+$(document).ready(function(){
+$("#chongxuan2").hide();
+$("#chongxuan3").hide();
+$("#chongxuan4").hide();
+$("#chongxuan1").hover(function(){
+	$("#chongxuan1").hide(1000);
+	$("#chongxuan2").show(1000);
+})
+$("#chongxuan2").hover(function(){
+	$("#chongxuan2").hide(1000);
+	$("#chongxuan3").show(1000);
+})
+$("#chongxuan3").hover(function(){
+	$("#chongxuan3").hide(1000);
+	$("#chongxuan4").show(1000);
+})	
+$("#chongxuan4").hover(function(){
+	$("#chongxuan4").hide(1000);
+	$("#chongxuan1").show(1000);
+})		
+
+
+});
+
+</script>
+</body>

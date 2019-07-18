@@ -15,12 +15,13 @@ import com.example.demo.entity.StudentEntity;
 @Component
 public interface StudentMapper {
 
-	List<StudentEntity> getAll();
+	List<StudentEntity> getAll(StudentEntity stu);
 	
 	int update(StudentEntity studentEntity);
 	
 	StudentEntity getOne(int id);
 	
+	void insert(StudentEntity studentEntity);
 //	@Select("SELECT * FROM student")
 //	@Results({
 //		@Result(property = "id",  column = "id"),

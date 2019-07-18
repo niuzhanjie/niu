@@ -8,8 +8,8 @@
 		<id column="id" property="id" jdbcType="INTEGER" />
 		<result column="name" property="name"	jdbcType="VARCHAR" />
 		<result column="sex" property="sex" jdbcType="VARCHAR" />
-		<result column="ages" property="ages" javaType="INTEGER" />
-		<result column="date" property="date" javaType="DATE" />
+		<result column="ages" property="ages" jdbcType="INTEGER" />
+		<result column="date" property="date" jdbcType="DATE" />
 		 <association property="score" column="id"
                       select="com.example.demo.mapper.ScoreMapper.getAll">
         </association>
@@ -22,8 +22,19 @@
 
 	<select id="getAll" resultMap="BaseResultMap">
 		SELECT
-	stu.id,stu.name,stu.sex,stu.ages,DATE_FORMAT(stu.date,'%Y-%m-%d') as date2
+	stu.id,stu.name,stu.sex,stu.ages,DATE_FORMAT(stu.date,'%Y-%m-%d') as date
 		FROM student stu
+		<where>
+		<if test="name != null and name !='' ">
+		name=#{name}
+		</if>
+		<if test="sex != null and sex !='' ">
+		name=#{name}
+		</if>
+		<if test="ages != null and ages !='' ">
+		name=#{name}
+		</if>
+		</where>
 	</select>
 
  <select id="getOne" parameterType="java.lang.Integer" resultMap="BaseResultMap" >
