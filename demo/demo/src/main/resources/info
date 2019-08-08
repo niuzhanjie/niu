@@ -6,3 +6,5 @@ redis-cli.exe -h 127.0.0.1 -p 6379
 
 
 git commit file/to/path -i -m "merge"
+
+	//	2019-02-23T09:01:53.909177Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: ewWxgJv<Q6e- 
