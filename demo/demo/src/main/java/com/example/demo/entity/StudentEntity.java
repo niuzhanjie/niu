@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import java.sql.Blob;
 import java.util.Date;
 
 public class StudentEntity {
@@ -9,7 +10,7 @@ public class StudentEntity {
 	private String sex;
 	private String ages;
 	private String date;
-
+	private byte[] file;
 	private ScoreEntity score;
 
 	public ScoreEntity getScore() {
@@ -30,6 +31,17 @@ public class StudentEntity {
 
 	public int getId() {
 		return id;
+	}
+
+
+
+
+	public byte[] getFile() {
+		return file;
+	}
+
+	public void setFile(byte[] file) {
+		this.file = file;
 	}
 
 	public void setId(int id) {

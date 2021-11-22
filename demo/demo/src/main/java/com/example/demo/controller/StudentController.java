@@ -37,7 +37,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.example.demo.entity.StudentEntity;
 import com.example.demo.entity.StudentEnum;
 import com.example.demo.service.StudentService;
-import com.example.demo.util.excel.ImportExcelUtil;
 
 @Controller
 public class StudentController {
@@ -75,10 +74,10 @@ public class StudentController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/langman")
+	@RequestMapping("/dream")
 	public String index2(Model model) {
 	
-		return "play/good";
+		return "play/index";
 
 	}
 	
@@ -283,7 +282,7 @@ public class StudentController {
 		 public void exportExcel2(HttpServletRequest request, HttpServletResponse response,StudentEntity stu) {
 			
 	         List<StudentEntity> stuList=service.getAll(stu);
-	       ImportExcelUtil.exportInfos(stuList, "学生信息", StudentEnum.class, StudentEntity.class, request, response);
+	//       ImportExcelUtil.exportInfos(stuList, "学生信息", StudentEnum.class, StudentEntity.class, request, response);
 			 
 	    
 	    }

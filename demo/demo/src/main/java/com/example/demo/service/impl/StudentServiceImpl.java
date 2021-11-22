@@ -12,6 +12,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,10 +22,12 @@ import com.example.demo.mapper.StudentMapper;
 import com.example.demo.service.StudentService;
 
 @Service
+//@Scope("prototype")
 public class StudentServiceImpl implements StudentService{
 
 	@Autowired
 	private StudentMapper studentMapper;
+
 
 	@Override
 	public List<StudentEntity> getAll(StudentEntity studentEntity) {

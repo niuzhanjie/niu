@@ -10,6 +10,7 @@
 		<result column="sex" property="sex" jdbcType="VARCHAR" />
 		<result column="ages" property="ages" jdbcType="INTEGER" />
 		<result column="date" property="date" jdbcType="DATE" />
+		<result column="file" property="file" jdbcType="BLOB" />
 		 <association property="score" column="id"
                       select="com.example.demo.mapper.ScoreMapper.getAll">
         </association>
@@ -47,9 +48,9 @@
     <insert id="insert" parameterType="com.example.demo.entity.StudentEntity" >
        INSERT INTO 
           student
-          (id,name,sex,ages) 
+          (id,name,sex,ages,file) 
         VALUES
-          (#{id}, #{name}, #{sex},#{ages})
+          (#{id}, #{name}, #{sex},#{ages},#{file})
     </insert>
     
     <update id="update" parameterType="com.example.demo.entity.StudentEntity" >

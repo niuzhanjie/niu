@@ -18,8 +18,8 @@ public class TestExcel003 {
         FileOutputStream out = null;
         //定义一个Workbook对象
         Workbook wb = null;  
-        String IN_WORKBOOK_NAME = "D:/read.xlsx";
-        String OUT_WORKBOOK_NAME = "D:/read.xlsx";
+        String IN_WORKBOOK_NAME = "D:/write.xlsx";
+        String OUT_WORKBOOK_NAME = "D:/write.xlsx";
 
         try {  
             in = new FileInputStream(IN_WORKBOOK_NAME);  
@@ -78,7 +78,7 @@ public class TestExcel003 {
 				              cell3.setCellValue(str);
 				              cell4.setCellValue(j);
 				              cell5.setCellValue(data2[0]);
-				              cell6.setCellValue(data2[1]);
+				            //  cell6.setCellValue(data2[1]);
 				              j++;
 				              rownum++;
 					}
