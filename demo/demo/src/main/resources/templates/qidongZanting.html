@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" >
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" >
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" ></script>
+<body class="container" th:fragment="search">
+<br/>
+<div >
+
+<br/><br/>
+<div class="pull-right">
+ </div>
+ <div  >
+ 
+ 
+ <input type="button" class="btn  btn-default" value="开始" id="start">
+  <input type="button" class="btn  btn-default" value="暂停" id="pause">
+  <input type="button" class="btn  btn-default" value="停止" id="stop">
+  <input type="button" class="btn  btn-default" value="重启" id="restart">
+ </div><br>
+
+ <div >
+ 
+ 
+ <input type="button" class="btn  btn-default" value="开始" id="start2">
+  <input type="button" class="btn  btn-default" value="暂停" id="pause2">
+  <input type="button" class="btn  btn-default" value="停止" id="stop2">
+  <input type="button" class="btn  btn-default" value="重启" id="restart2">
+ </div>
+
+<script>
+$(document).ready(function(){
+	
+	
+	
+	$("#start").click(function() {
+		$.ajax({
+			  url:'start',
+	       //    type:'post',
+	           dataType:'json',
+	         	
+	           success:function(data){
+	         	 console.log(data);
+	           }
+		})
+		});
+	
+	$("#stop").click(function() {
+		$.ajax({
+			  url:'stop',
+	       //    type:'post',
+	           dataType:'json',
+	         	
+	           success:function(data){
+	         	 console.log(data);
+	           }
+		})
+		});
+
+	$("#restart").click(function() {
+		$.ajax({
+			  url:'restart',
+	       //    type:'post',
+	           dataType:'json',
+	         	
+	           success:function(data){
+	         	 console.log(data);
+	           }
+		})
+		});
+	
+	$("#pause").click(function() {
+		var user1 = {"我好":"你好", "年龄": "ni"};
+		var user2 = { username: 'test', age: 11 };
+		var userArr = [];
+		userArr.push(user1);
+		userArr.push(user2);
+		$.ajax({
+			  url:'pause',
+	           type:'post',
+	           dataType:'text',
+	           contentType :"application/json",//不加这个会出现乱码
+	         	data:JSON.stringify(user1),
+// 	         data:{
+// 	        	 name:"吧"
+// 	         },
+		  success:function(data){
+	         	 console.log(data);
+	        }
+		})
+		});
+	
+
+			});
+</script>
+</div>
+</body>
+
+
+
+
+</html>
