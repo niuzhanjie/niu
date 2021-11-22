@@ -10,7 +10,14 @@ public class Test {
 		System.out.println(res);
 	}
 
-//test chongtu
+
+
+ /**
+  * 
+  * @param a
+  * @param b
+  * @return
+  */
   public static boolean test2(String a,String b ) {
 	  boolean res=false;
 	  int size=a.length();
