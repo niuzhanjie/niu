@@ -1,6 +1,6 @@
 package com.example.demo;
 
-
+//test chongtu
 public class Test {
 	public static void main(String[] args) {
 		String a="abcde";
@@ -10,7 +10,7 @@ public class Test {
 		System.out.println(res);
 	}
 
-
+//test chongtu
   public static boolean test2(String a,String b ) {
 	  boolean res=false;
 	  int size=a.length();
