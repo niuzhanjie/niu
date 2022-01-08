@@ -16,6 +16,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.example.demo.log.LoggerInfo;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
@@ -62,7 +63,8 @@ public class StudentController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/meng")
+	@RequestMapping("/yangShuaiBi")
+	@LoggerInfo(value = "play页面访问")
 	public String indexpley(Model model) {
 	
 		return "play/index";
@@ -83,6 +85,7 @@ public class StudentController {
 	
 	@RequestMapping("/getStudent")
 	@ResponseBody
+	@LoggerInfo(value = "学生接口")
 	public List<StudentEntity> getUsers(StudentEntity studentEntity) {
 	
 		List<StudentEntity> stuList=service.getAll(studentEntity);
