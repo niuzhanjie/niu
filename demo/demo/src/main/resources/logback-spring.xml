@@ -263,65 +263,65 @@
 <!--            </providers>-->
 <!--        </encoder>-->
 <!--    </appender>-->
-    <springProfile name="online">
-        <logger name="org.springframework.web" level="INFO">
-            <appender-ref ref="logstash-online-info"/>
-        </logger>
-        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="WARN">
-            <appender-ref ref="logstash-online-info"/>
-        </logger>
-        <logger name="com.chanpay.cloud" level="INFO">
-            <appender-ref ref="logstash-online-info"/>
-        </logger>
-        <logger name="tk.mybatis" level="DEBUG">
-            <appender-ref ref="logstash-online-info"/>
-        </logger>
-    </springProfile>
-    <springProfile name="test">
-        <logger name="org.springframework.web" level="INFO">
-            <appender-ref ref="logstash-test-info"/>
-        </logger>
-        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="WARN">
-            <appender-ref ref="logstash-test-info"/>
-        </logger>
-        <logger name="com.chanpay.cloud" level="DEBUG">
-            <appender-ref ref="logstash-test-info"/>
-        </logger>
-        <logger name="tk.mybatis" level="DEBUG">
-            <appender-ref ref="logstash-test-info"/>
-        </logger>
-    </springProfile>
-    <springProfile name="stable">
-        <logger name="org.springframework.web" level="INFO">
-            <appender-ref ref="logstash-stable-info"/>
-        </logger>
-        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="WARN">
-            <appender-ref ref="logstash-stable-info"/>
-        </logger>
-        <logger name="com.chanpay.cloud" level="DEBUG">
-            <appender-ref ref="logstash-stable-info"/>
-        </logger>
-        <logger name="tk.mybatis" level="DEBUG">
-            <appender-ref ref="logstash-stable-info"/>
-        </logger>
-    </springProfile>
-    <springProfile name="dev,dev-hanyonglinag,dev-linxuan,dev-sunkaiwei,dev-tianjing,dev-weijianshu">
-        <logger name="org.springframework.web" level="INFO">
-            <appender-ref ref="info-log"/>
-        </logger>
-        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="WARN">
-            <appender-ref ref="info-log"/>
-        </logger>
-        <logger name="tk.mybatis" level="DEBUG">
-            <appender-ref ref="info-log"/>
-        </logger>
-        <logger name="com.chanpay.basicservice.feign" level="DEBUG">
-            <appender-ref ref="info-log"/>
-        </logger>
-        <logger name="com.chanpay.basicservice.feign" level="DEBUG">
-            <appender-ref ref="info-log"/>
-        </logger>
-    </springProfile>
+<!--    <springProfile name="online">-->
+<!--        <logger name="org.springframework.web" level="INFO">-->
+<!--            <appender-ref ref="logstash-online-info"/>-->
+<!--        </logger>-->
+<!--        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="WARN">-->
+<!--            <appender-ref ref="logstash-online-info"/>-->
+<!--        </logger>-->
+<!--        <logger name="com.chanpay.cloud" level="INFO">-->
+<!--            <appender-ref ref="logstash-online-info"/>-->
+<!--        </logger>-->
+<!--        <logger name="tk.mybatis" level="DEBUG">-->
+<!--            <appender-ref ref="logstash-online-info"/>-->
+<!--        </logger>-->
+<!--    </springProfile>-->
+<!--    <springProfile name="test">-->
+<!--        <logger name="org.springframework.web" level="INFO">-->
+<!--            <appender-ref ref="logstash-test-info"/>-->
+<!--        </logger>-->
+<!--        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="WARN">-->
+<!--            <appender-ref ref="logstash-test-info"/>-->
+<!--        </logger>-->
+<!--        <logger name="com.chanpay.cloud" level="DEBUG">-->
+<!--            <appender-ref ref="logstash-test-info"/>-->
+<!--        </logger>-->
+<!--        <logger name="tk.mybatis" level="DEBUG">-->
+<!--            <appender-ref ref="logstash-test-info"/>-->
+<!--        </logger>-->
+<!--    </springProfile>-->
+<!--    <springProfile name="stable">-->
+<!--        <logger name="org.springframework.web" level="INFO">-->
+<!--            <appender-ref ref="logstash-stable-info"/>-->
+<!--        </logger>-->
+<!--        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="WARN">-->
+<!--            <appender-ref ref="logstash-stable-info"/>-->
+<!--        </logger>-->
+<!--        <logger name="com.chanpay.cloud" level="DEBUG">-->
+<!--            <appender-ref ref="logstash-stable-info"/>-->
+<!--        </logger>-->
+<!--        <logger name="tk.mybatis" level="DEBUG">-->
+<!--            <appender-ref ref="logstash-stable-info"/>-->
+<!--        </logger>-->
+<!--    </springProfile>-->
+<!--    <springProfile name="dev,dev-hanyonglinag,dev-linxuan,dev-sunkaiwei,dev-tianjing,dev-weijianshu">-->
+<!--        <logger name="org.springframework.web" level="INFO">-->
+<!--            <appender-ref ref="info-log"/>-->
+<!--        </logger>-->
+<!--        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="WARN">-->
+<!--            <appender-ref ref="info-log"/>-->
+<!--        </logger>-->
+<!--        <logger name="tk.mybatis" level="DEBUG">-->
+<!--            <appender-ref ref="info-log"/>-->
+<!--        </logger>-->
+<!--        <logger name="com.chanpay.basicservice.feign" level="DEBUG">-->
+<!--            <appender-ref ref="info-log"/>-->
+<!--        </logger>-->
+<!--        <logger name="com.chanpay.basicservice.feign" level="DEBUG">-->
+<!--            <appender-ref ref="info-log"/>-->
+<!--        </logger>-->
+<!--    </springProfile>-->
     <root level="INFO">
         <appender-ref ref="console"/>
         <appender-ref ref="info-log"/>
