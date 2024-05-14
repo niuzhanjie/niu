@@ -1,0 +1,34 @@
+2022-01-09 17:08:03.473  INFO 15244 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication on T480- with PID 15244 (D:\ideaworkspace\niu-master\test\niu\demo\demo\target\classes started by admin in D:\ideaworkspace\niu-master\test\niu\demo\demo)
+2022-01-09 17:08:03.486  INFO 15244 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2022-01-09 17:08:05.941  INFO 15244 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-09 17:08:05.951  INFO 15244 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-09 17:08:06.072  INFO 15244 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 0 repository interfaces.
+2022-01-09 17:08:06.724  INFO 15244 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$3ac472f0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-09 17:08:06.825  INFO 15244 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6712616d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-09 17:08:08.054  INFO 15244 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-09 17:08:08.091  INFO 15244 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-09 17:08:08.092  INFO 15244 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2022-01-09 17:08:08.263  INFO 15244 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-09 17:08:08.263  INFO 15244 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4641 ms
+2022-01-09 17:08:11.292  INFO 15244 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-09 17:08:11.428  INFO 15244 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-09 17:08:12.647  INFO 15244 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-09 17:08:12.841  INFO 15244 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-09 17:08:12.846  INFO 15244 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 10.202 seconds (JVM running for 11.052)
+2022-01-09 17:10:31.358  INFO 11504 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication on T480- with PID 11504 (D:\ideaworkspace\niu-master\test\niu\demo\demo\target\classes started by admin in D:\ideaworkspace\niu-master\test\niu\demo\demo)
+2022-01-09 17:10:31.361  INFO 11504 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2022-01-09 17:10:33.305  INFO 11504 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-09 17:10:33.308  INFO 11504 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-09 17:10:33.369  INFO 11504 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 repository interfaces.
+2022-01-09 17:10:33.904  INFO 11504 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$3ad52d0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-09 17:10:33.995  INFO 11504 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$67231b89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-09 17:10:35.117  INFO 11504 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-09 17:10:35.149  INFO 11504 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-09 17:10:35.149  INFO 11504 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2022-01-09 17:10:35.306  INFO 11504 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-09 17:10:35.306  INFO 11504 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3862 ms
+2022-01-09 17:10:37.523  INFO 11504 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-09 17:10:37.685  INFO 11504 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-09 17:10:38.719  INFO 11504 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-09 17:10:38.881  INFO 11504 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-09 17:10:38.886  INFO 11504 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 8.187 seconds (JVM running for 8.818)

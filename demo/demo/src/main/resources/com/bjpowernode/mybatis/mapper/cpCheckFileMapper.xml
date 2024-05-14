@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.mybatis.mapper.cpCheckFileMapper">
+  <resultMap id="BaseResultMap" type="com.bjpowernode.mybatis.pojo.cpCheckFile">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="check_type" jdbcType="VARCHAR" property="checkType" />
+    <result column="out_trade_no" jdbcType="VARCHAR" property="outTradeNo" />
+    <result column="agent_one" jdbcType="VARCHAR" property="agentOne" />
+    <result column="agent_id" jdbcType="VARCHAR" property="agentId" />
+    <result column="rrn" jdbcType="VARCHAR" property="rrn" />
+    <result column="amount" jdbcType="VARCHAR" property="amount" />
+    <result column="trans_code" jdbcType="VARCHAR" property="transCode" />
+    <result column="acct_flag" jdbcType="VARCHAR" property="acctFlag" />
+    <result column="sys_trace" jdbcType="VARCHAR" property="sysTrace" />
+    <result column="merch_id" jdbcType="VARCHAR" property="merchId" />
+    <result column="channel_merch_id" jdbcType="VARCHAR" property="channelMerchId" />
+    <result column="trans_date" jdbcType="VARCHAR" property="transDate" />
+    <result column="trans_time" jdbcType="VARCHAR" property="transTime" />
+    <result column="settle_amount" jdbcType="VARCHAR" property="settleAmount" />
+    <result column="trans_name" jdbcType="VARCHAR" property="transName" />
+    <result column="check_flag" jdbcType="VARCHAR" property="checkFlag" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="merch_order_no" jdbcType="VARCHAR" property="merchOrderNo" />
+    <result column="function_code" jdbcType="VARCHAR" property="functionCode" />
+    <result column="product_code" jdbcType="VARCHAR" property="productCode" />
+    <result column="settle_date" jdbcType="VARCHAR" property="settleDate" />
+    <result column="conn_type" jdbcType="VARCHAR" property="connType" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, check_type, out_trade_no, agent_one, agent_id, rrn, amount, trans_code, acct_flag, 
+    sys_trace, merch_id, channel_merch_id, trans_date, trans_time, settle_amount, trans_name, 
+    check_flag, order_no, merch_order_no, function_code, product_code, settle_date, conn_type
+  </sql>
+  <select id="selectByExample" parameterType="com.bjpowernode.mybatis.pojo.cpCheckFileExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from cp_check_file
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cp_check_file
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cp_check_file
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bjpowernode.mybatis.pojo.cpCheckFileExample">
+    delete from cp_check_file
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.bjpowernode.mybatis.pojo.cpCheckFile">
+    insert into cp_check_file (id, check_type, out_trade_no, 
+      agent_one, agent_id, rrn, 
+      amount, trans_code, acct_flag, 
+      sys_trace, merch_id, channel_merch_id, 
+      trans_date, trans_time, settle_amount, 
+      trans_name, check_flag, order_no, 
+      merch_order_no, function_code, product_code, 
+      settle_date, conn_type)
+    values (#{id,jdbcType=BIGINT}, #{checkType,jdbcType=VARCHAR}, #{outTradeNo,jdbcType=VARCHAR}, 
+      #{agentOne,jdbcType=VARCHAR}, #{agentId,jdbcType=VARCHAR}, #{rrn,jdbcType=VARCHAR}, 
+      #{amount,jdbcType=VARCHAR}, #{transCode,jdbcType=VARCHAR}, #{acctFlag,jdbcType=VARCHAR}, 
+      #{sysTrace,jdbcType=VARCHAR}, #{merchId,jdbcType=VARCHAR}, #{channelMerchId,jdbcType=VARCHAR}, 
+      #{transDate,jdbcType=VARCHAR}, #{transTime,jdbcType=VARCHAR}, #{settleAmount,jdbcType=VARCHAR}, 
+      #{transName,jdbcType=VARCHAR}, #{checkFlag,jdbcType=VARCHAR}, #{orderNo,jdbcType=VARCHAR}, 
+      #{merchOrderNo,jdbcType=VARCHAR}, #{functionCode,jdbcType=VARCHAR}, #{productCode,jdbcType=VARCHAR}, 
+      #{settleDate,jdbcType=VARCHAR}, #{connType,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bjpowernode.mybatis.pojo.cpCheckFile">
+    insert into cp_check_file
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="checkType != null">
+        check_type,
+      </if>
+      <if test="outTradeNo != null">
+        out_trade_no,
+      </if>
+      <if test="agentOne != null">
+        agent_one,
+      </if>
+      <if test="agentId != null">
+        agent_id,
+      </if>
+      <if test="rrn != null">
+        rrn,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="transCode != null">
+        trans_code,
+      </if>
+      <if test="acctFlag != null">
+        acct_flag,
+      </if>
+      <if test="sysTrace != null">
+        sys_trace,
+      </if>
+      <if test="merchId != null">
+        merch_id,
+      </if>
+      <if test="channelMerchId != null">
+        channel_merch_id,
+      </if>
+      <if test="transDate != null">
+        trans_date,
+      </if>
+      <if test="transTime != null">
+        trans_time,
+      </if>
+      <if test="settleAmount != null">
+        settle_amount,
+      </if>
+      <if test="transName != null">
+        trans_name,
+      </if>
+      <if test="checkFlag != null">
+        check_flag,
+      </if>
+      <if test="orderNo != null">
+        order_no,
+      </if>
+      <if test="merchOrderNo != null">
+        merch_order_no,
+      </if>
+      <if test="functionCode != null">
+        function_code,
+      </if>
+      <if test="productCode != null">
+        product_code,
+      </if>
+      <if test="settleDate != null">
+        settle_date,
+      </if>
+      <if test="connType != null">
+        conn_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="checkType != null">
+        #{checkType,jdbcType=VARCHAR},
+      </if>
+      <if test="outTradeNo != null">
+        #{outTradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="agentOne != null">
+        #{agentOne,jdbcType=VARCHAR},
+      </if>
+      <if test="agentId != null">
+        #{agentId,jdbcType=VARCHAR},
+      </if>
+      <if test="rrn != null">
+        #{rrn,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=VARCHAR},
+      </if>
+      <if test="transCode != null">
+        #{transCode,jdbcType=VARCHAR},
+      </if>
+      <if test="acctFlag != null">
+        #{acctFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="sysTrace != null">
+        #{sysTrace,jdbcType=VARCHAR},
+      </if>
+      <if test="merchId != null">
+        #{merchId,jdbcType=VARCHAR},
+      </if>
+      <if test="channelMerchId != null">
+        #{channelMerchId,jdbcType=VARCHAR},
+      </if>
+      <if test="transDate != null">
+        #{transDate,jdbcType=VARCHAR},
+      </if>
+      <if test="transTime != null">
+        #{transTime,jdbcType=VARCHAR},
+      </if>
+      <if test="settleAmount != null">
+        #{settleAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="transName != null">
+        #{transName,jdbcType=VARCHAR},
+      </if>
+      <if test="checkFlag != null">
+        #{checkFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNo != null">
+        #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="merchOrderNo != null">
+        #{merchOrderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="functionCode != null">
+        #{functionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="productCode != null">
+        #{productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="settleDate != null">
+        #{settleDate,jdbcType=VARCHAR},
+      </if>
+      <if test="connType != null">
+        #{connType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bjpowernode.mybatis.pojo.cpCheckFileExample" resultType="java.lang.Long">
+    select count(*) from cp_check_file
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update cp_check_file
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.checkType != null">
+        check_type = #{record.checkType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.outTradeNo != null">
+        out_trade_no = #{record.outTradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.agentOne != null">
+        agent_one = #{record.agentOne,jdbcType=VARCHAR},
+      </if>
+      <if test="record.agentId != null">
+        agent_id = #{record.agentId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rrn != null">
+        rrn = #{record.rrn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.amount != null">
+        amount = #{record.amount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.transCode != null">
+        trans_code = #{record.transCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.acctFlag != null">
+        acct_flag = #{record.acctFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysTrace != null">
+        sys_trace = #{record.sysTrace,jdbcType=VARCHAR},
+      </if>
+      <if test="record.merchId != null">
+        merch_id = #{record.merchId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.channelMerchId != null">
+        channel_merch_id = #{record.channelMerchId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.transDate != null">
+        trans_date = #{record.transDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.transTime != null">
+        trans_time = #{record.transTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.settleAmount != null">
+        settle_amount = #{record.settleAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.transName != null">
+        trans_name = #{record.transName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.checkFlag != null">
+        check_flag = #{record.checkFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.orderNo != null">
+        order_no = #{record.orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.merchOrderNo != null">
+        merch_order_no = #{record.merchOrderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.functionCode != null">
+        function_code = #{record.functionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productCode != null">
+        product_code = #{record.productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.settleDate != null">
+        settle_date = #{record.settleDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.connType != null">
+        conn_type = #{record.connType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update cp_check_file
+    set id = #{record.id,jdbcType=BIGINT},
+      check_type = #{record.checkType,jdbcType=VARCHAR},
+      out_trade_no = #{record.outTradeNo,jdbcType=VARCHAR},
+      agent_one = #{record.agentOne,jdbcType=VARCHAR},
+      agent_id = #{record.agentId,jdbcType=VARCHAR},
+      rrn = #{record.rrn,jdbcType=VARCHAR},
+      amount = #{record.amount,jdbcType=VARCHAR},
+      trans_code = #{record.transCode,jdbcType=VARCHAR},
+      acct_flag = #{record.acctFlag,jdbcType=VARCHAR},
+      sys_trace = #{record.sysTrace,jdbcType=VARCHAR},
+      merch_id = #{record.merchId,jdbcType=VARCHAR},
+      channel_merch_id = #{record.channelMerchId,jdbcType=VARCHAR},
+      trans_date = #{record.transDate,jdbcType=VARCHAR},
+      trans_time = #{record.transTime,jdbcType=VARCHAR},
+      settle_amount = #{record.settleAmount,jdbcType=VARCHAR},
+      trans_name = #{record.transName,jdbcType=VARCHAR},
+      check_flag = #{record.checkFlag,jdbcType=VARCHAR},
+      order_no = #{record.orderNo,jdbcType=VARCHAR},
+      merch_order_no = #{record.merchOrderNo,jdbcType=VARCHAR},
+      function_code = #{record.functionCode,jdbcType=VARCHAR},
+      product_code = #{record.productCode,jdbcType=VARCHAR},
+      settle_date = #{record.settleDate,jdbcType=VARCHAR},
+      conn_type = #{record.connType,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bjpowernode.mybatis.pojo.cpCheckFile">
+    update cp_check_file
+    <set>
+      <if test="checkType != null">
+        check_type = #{checkType,jdbcType=VARCHAR},
+      </if>
+      <if test="outTradeNo != null">
+        out_trade_no = #{outTradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="agentOne != null">
+        agent_one = #{agentOne,jdbcType=VARCHAR},
+      </if>
+      <if test="agentId != null">
+        agent_id = #{agentId,jdbcType=VARCHAR},
+      </if>
+      <if test="rrn != null">
+        rrn = #{rrn,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=VARCHAR},
+      </if>
+      <if test="transCode != null">
+        trans_code = #{transCode,jdbcType=VARCHAR},
+      </if>
+      <if test="acctFlag != null">
+        acct_flag = #{acctFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="sysTrace != null">
+        sys_trace = #{sysTrace,jdbcType=VARCHAR},
+      </if>
+      <if test="merchId != null">
+        merch_id = #{merchId,jdbcType=VARCHAR},
+      </if>
+      <if test="channelMerchId != null">
+        channel_merch_id = #{channelMerchId,jdbcType=VARCHAR},
+      </if>
+      <if test="transDate != null">
+        trans_date = #{transDate,jdbcType=VARCHAR},
+      </if>
+      <if test="transTime != null">
+        trans_time = #{transTime,jdbcType=VARCHAR},
+      </if>
+      <if test="settleAmount != null">
+        settle_amount = #{settleAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="transName != null">
+        trans_name = #{transName,jdbcType=VARCHAR},
+      </if>
+      <if test="checkFlag != null">
+        check_flag = #{checkFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNo != null">
+        order_no = #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="merchOrderNo != null">
+        merch_order_no = #{merchOrderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="functionCode != null">
+        function_code = #{functionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="productCode != null">
+        product_code = #{productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="settleDate != null">
+        settle_date = #{settleDate,jdbcType=VARCHAR},
+      </if>
+      <if test="connType != null">
+        conn_type = #{connType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bjpowernode.mybatis.pojo.cpCheckFile">
+    update cp_check_file
+    set check_type = #{checkType,jdbcType=VARCHAR},
+      out_trade_no = #{outTradeNo,jdbcType=VARCHAR},
+      agent_one = #{agentOne,jdbcType=VARCHAR},
+      agent_id = #{agentId,jdbcType=VARCHAR},
+      rrn = #{rrn,jdbcType=VARCHAR},
+      amount = #{amount,jdbcType=VARCHAR},
+      trans_code = #{transCode,jdbcType=VARCHAR},
+      acct_flag = #{acctFlag,jdbcType=VARCHAR},
+      sys_trace = #{sysTrace,jdbcType=VARCHAR},
+      merch_id = #{merchId,jdbcType=VARCHAR},
+      channel_merch_id = #{channelMerchId,jdbcType=VARCHAR},
+      trans_date = #{transDate,jdbcType=VARCHAR},
+      trans_time = #{transTime,jdbcType=VARCHAR},
+      settle_amount = #{settleAmount,jdbcType=VARCHAR},
+      trans_name = #{transName,jdbcType=VARCHAR},
+      check_flag = #{checkFlag,jdbcType=VARCHAR},
+      order_no = #{orderNo,jdbcType=VARCHAR},
+      merch_order_no = #{merchOrderNo,jdbcType=VARCHAR},
+      function_code = #{functionCode,jdbcType=VARCHAR},
+      product_code = #{productCode,jdbcType=VARCHAR},
+      settle_date = #{settleDate,jdbcType=VARCHAR},
+      conn_type = #{connType,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

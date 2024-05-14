@@ -1,0 +1,24 @@
+2022-01-18 20:27:55.222  INFO 5416 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication on T480- with PID 5416 (D:\ideaworkspace\niu-master\test\niu\demo\demo\target\classes started by admin in D:\ideaworkspace\niu-master\test\niu\demo\demo)
+2022-01-18 20:27:55.231  INFO 5416 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2022-01-18 20:27:57.050  INFO 5416 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-18 20:27:57.052  INFO 5416 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-18 20:27:57.096  INFO 5416 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
+2022-01-18 20:27:57.576  INFO 5416 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$9bf9e410] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-18 20:27:57.658  INFO 5416 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c847d28d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-18 20:27:58.702  INFO 5416 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-01-18 20:27:58.731  INFO 5416 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-18 20:27:58.732  INFO 5416 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2022-01-18 20:27:58.889  INFO 5416 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-18 20:27:58.890  INFO 5416 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3566 ms
+2022-01-18 20:28:00.933  INFO 5416 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-18 20:28:01.041  INFO 5416 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-18 20:28:01.915  INFO 5416 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-18 20:28:02.068  INFO 5416 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-01-18 20:28:02.071  INFO 5416 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 7.46 seconds (JVM running for 8.052)
+2022-01-18 20:28:09.641  INFO 5416 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-18 20:28:09.641  INFO 5416 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-18 20:28:09.655  INFO 5416 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2022-01-18 20:28:09.720  INFO 5416 --- [nio-8082-exec-1] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 请求参数：{}
+2022-01-18 20:28:09.728  INFO 5416 --- [nio-8082-exec-1] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 响应参数：test2, 耗时6ms
+2022-01-18 20:43:40.907  INFO 5416 --- [nio-8082-exec-4] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 请求参数：{}
+2022-01-18 20:43:40.908  INFO 5416 --- [nio-8082-exec-4] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 响应参数：test2, 耗时0ms

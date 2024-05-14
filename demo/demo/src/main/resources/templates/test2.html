@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form id="form" th:action="${return_code}" method="post">
+    <input type="hidden" name="epccGwMsg"  th:value="${return_msg}" />
+
+
+	</form>
+<script type="text/javascript"> document.getElementById("form").submit(); </script>
+</html>
+

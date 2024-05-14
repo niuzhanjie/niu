@@ -1,0 +1,40 @@
+2022-01-19 10:41:28.738  INFO 28552 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication on T480- with PID 28552 (D:\ideaworkspace\niu-master\test\niu\demo\demo\target\classes started by admin in D:\ideaworkspace\niu-master\test\niu\demo\demo)
+2022-01-19 10:41:28.750  INFO 28552 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2022-01-19 10:41:30.761  INFO 28552 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 10:41:30.764  INFO 28552 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-19 10:41:30.822  INFO 28552 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 repository interfaces.
+2022-01-19 10:41:31.342  INFO 28552 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$bb56fba6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-19 10:41:31.435  INFO 28552 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e7a4ea23] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-19 10:41:32.516  INFO 28552 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-01-19 10:41:32.542  INFO 28552 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-19 10:41:32.543  INFO 28552 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2022-01-19 10:41:32.696  INFO 28552 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-19 10:41:32.697  INFO 28552 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3854 ms
+2022-01-19 10:41:34.800  INFO 28552 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-19 10:41:34.920  INFO 28552 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-19 10:41:36.274  INFO 28552 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-19 10:41:36.532  INFO 28552 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-01-19 10:41:36.538  INFO 28552 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 8.477 seconds (JVM running for 9.041)
+2022-01-19 10:41:55.688  INFO 28552 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-19 10:41:55.688  INFO 28552 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-19 10:41:55.702  INFO 28552 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2022-01-19 10:47:58.940  INFO 33112 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication on T480- with PID 33112 (D:\ideaworkspace\niu-master\test\niu\demo\demo\target\classes started by admin in D:\ideaworkspace\niu-master\test\niu\demo\demo)
+2022-01-19 10:47:58.943  INFO 33112 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2022-01-19 10:48:00.762  INFO 33112 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 10:48:00.767  INFO 33112 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-19 10:48:00.821  INFO 33112 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 repository interfaces.
+2022-01-19 10:48:01.350  INFO 33112 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$46f92aa8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-19 10:48:01.432  INFO 33112 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73471925] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-19 10:48:02.488  INFO 33112 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-01-19 10:48:02.516  INFO 33112 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-19 10:48:02.517  INFO 33112 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2022-01-19 10:48:02.668  INFO 33112 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-19 10:48:02.668  INFO 33112 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3643 ms
+2022-01-19 10:48:04.738  INFO 33112 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-19 10:48:04.858  INFO 33112 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-19 10:48:05.821  INFO 33112 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-19 10:48:05.968  INFO 33112 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-01-19 10:48:05.971  INFO 33112 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 7.624 seconds (JVM running for 8.162)
+2022-01-19 10:48:27.711  INFO 33112 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-19 10:48:27.712  INFO 33112 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-19 10:48:27.734  INFO 33112 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms

@@ -1,0 +1,56 @@
+2022-01-10 16:29:36.428  INFO 17184 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication on T480- with PID 17184 (D:\ideaworkspace\niu-master\test\niu\demo\demo\target\classes started by admin in D:\ideaworkspace\niu-master\test\niu\demo\demo)
+2022-01-10 16:29:36.438  INFO 17184 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2022-01-10 16:29:39.586  INFO 17184 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-10 16:29:39.589  INFO 17184 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-10 16:29:39.650  INFO 17184 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33ms. Found 0 repository interfaces.
+2022-01-10 16:29:40.148  INFO 17184 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$24f44c41] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-10 16:29:40.272  INFO 17184 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$51423abe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-10 16:29:41.429  INFO 17184 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-10 16:29:41.455  INFO 17184 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-10 16:29:41.456  INFO 17184 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2022-01-10 16:29:41.605  INFO 17184 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-10 16:29:41.606  INFO 17184 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5026 ms
+2022-01-10 16:29:43.961  INFO 17184 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-10 16:29:44.083  INFO 17184 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-10 16:29:45.809  INFO 17184 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-10 16:29:45.980  INFO 17184 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-10 16:29:45.984  INFO 17184 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 10.26 seconds (JVM running for 10.92)
+2022-01-10 16:31:56.225  INFO 17184 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-10 16:31:56.225  INFO 17184 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-10 16:31:56.244  INFO 17184 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2022-01-10 16:31:56.316  INFO 17184 --- [nio-8081-exec-1] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 请求参数：org.apache.catalina.connector.RequestFacade@3c0cd64c
+2022-01-10 16:31:56.325  INFO 17184 --- [nio-8081-exec-1] c.e.demo.controller.StudentController    : 商户号：null
+2022-01-10 16:31:56.325  INFO 17184 --- [nio-8081-exec-1] c.e.demo.controller.StudentController    : 内容：null
+2022-01-10 16:31:56.392  INFO 17184 --- [nio-8081-exec-1] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 响应参数：{"return_msg":"OK","return_code":"SUCCESS"}, 耗时76ms
+2022-01-10 16:32:21.123  INFO 17184 --- [nio-8081-exec-2] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 请求参数：org.apache.catalina.connector.RequestFacade@3c0cd64c
+2022-01-10 16:32:21.123  INFO 17184 --- [nio-8081-exec-2] c.e.demo.controller.StudentController    : 商户号：null
+2022-01-10 16:32:21.123  INFO 17184 --- [nio-8081-exec-2] c.e.demo.controller.StudentController    : 内容：null
+2022-01-10 16:32:21.123  INFO 17184 --- [nio-8081-exec-2] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 响应参数：{"return_msg":"OK","return_code":"SUCCESS"}, 耗时0ms
+2022-01-10 16:34:38.113  INFO 22284 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication on T480- with PID 22284 (D:\ideaworkspace\niu-master\test\niu\demo\demo\target\classes started by admin in D:\ideaworkspace\niu-master\test\niu\demo\demo)
+2022-01-10 16:34:38.117  INFO 22284 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2022-01-10 16:34:40.103  INFO 22284 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-10 16:34:40.107  INFO 22284 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-10 16:34:40.159  INFO 22284 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 repository interfaces.
+2022-01-10 16:34:40.633  INFO 22284 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$eaeccb15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-10 16:34:40.713  INFO 22284 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$173ab992] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-10 16:34:41.753  INFO 22284 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-10 16:34:41.781  INFO 22284 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-10 16:34:41.781  INFO 22284 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2022-01-10 16:34:41.928  INFO 22284 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-10 16:34:41.928  INFO 22284 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3720 ms
+2022-01-10 16:34:43.788  INFO 22284 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-10 16:34:43.893  INFO 22284 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-10 16:34:44.873  INFO 22284 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-10 16:34:45.383  INFO 22284 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-10 16:34:45.391  INFO 22284 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 7.938 seconds (JVM running for 8.46)
+2022-01-10 16:34:49.469  INFO 22284 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-10 16:34:49.469  INFO 22284 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-10 16:34:49.486  INFO 22284 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2022-01-10 16:34:49.549  INFO 22284 --- [nio-8081-exec-1] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 请求参数：org.apache.catalina.connector.RequestFacade@53b4fe5a
+2022-01-10 16:34:49.557  INFO 22284 --- [nio-8081-exec-1] c.e.demo.controller.StudentController    : 商户号：null
+2022-01-10 16:34:49.557  INFO 22284 --- [nio-8081-exec-1] c.e.demo.controller.StudentController    : 内容：null
+2022-01-10 16:34:49.618  INFO 22284 --- [nio-8081-exec-1] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 响应参数：{"return_msg":"OK","return_code":"SUCCESS"}, 耗时67ms
+2022-01-10 16:34:52.936  INFO 22284 --- [nio-8081-exec-2] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 请求参数：org.apache.catalina.connector.RequestFacade@53b4fe5a
+2022-01-10 16:34:52.936  INFO 22284 --- [nio-8081-exec-2] c.e.demo.controller.StudentController    : 商户号：null
+2022-01-10 16:34:52.936  INFO 22284 --- [nio-8081-exec-2] c.e.demo.controller.StudentController    : 内容：null
+2022-01-10 16:34:52.936  INFO 22284 --- [nio-8081-exec-2] com.example.demo.log.AopLogConfig        :  接口 [回调测试] 响应参数：{return_msg=OK, return_code=SUCCESS}, 耗时0ms

@@ -1,0 +1,26 @@
+[2m2022-11-14 15:08:59.140[0;39m [31mERROR[0;39m [35m36200[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Could not create component [jsonFactoryDecorator] of type [com.hht.cloud.accountsystem.log.ChanpayJsonFactoryDecorator] java.lang.ClassNotFoundException: com.hht.cloud.accountsystem.log.ChanpayJsonFactoryDecorator
+ERROR in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Could not create component [jsonFactoryDecorator] of type [com.hht.cloud.accountsystem.log.ChanpayJsonFactoryDecorator] java.lang.ClassNotFoundException: com.hht.cloud.accountsystem.log.ChanpayJsonFactoryDecorator
+ERROR in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Could not create component [jsonFactoryDecorator] of type [com.hht.cloud.accountsystem.log.ChanpayJsonFactoryDecorator] java.lang.ClassNotFoundException: com.hht.cloud.accountsystem.log.ChanpayJsonFactoryDecorator
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:167)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:289)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:264)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:226)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:203)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+
